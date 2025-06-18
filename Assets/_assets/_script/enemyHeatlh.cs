@@ -12,7 +12,10 @@ public class enemyHeatlh : MonoBehaviour
 
     private void die()
     {
+        var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Destroy(explosion, 1);
         Destroy(gameObject);
+
     }
 
     void Start()
