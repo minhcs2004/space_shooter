@@ -6,11 +6,31 @@ public class Bullet : MonoBehaviour
 {
 
     [SerializeField] private float speed;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var enemy = collision.GetComponent<EnemyHealth>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+        }
+
+
+
+        Destroy(gameObject);
+
+    }
+
+
+
+
+
 
     // Update is called once per frame
     void Update()

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3098658366797010541}
   - component: {fileID: 1606965933686819306}
   - component: {fileID: 4377760750413556338}
-  - component: {fileID: 4171916252617806639}
+  - component: {fileID: -4050791149621605484}
+  - component: {fileID: 997854649125583640}
   m_Layer: 7
   m_Name: enemy
   m_TagString: Untagged
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946746549692192539}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -142,10 +143,10 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946746549692192539}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -181,7 +182,7 @@ PolygonCollider2D:
       - {x: -0.112, y: -0.47200003}
       - {x: -0.104, y: -0.080000006}
       - {x: -0.048, y: -0.296}
---- !u!114 &4171916252617806639
+--- !u!114 &-4050791149621605484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,8 +191,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946746549692192539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e09be7fbac6a342b5b6ce95be59f67, type: 3}
+  m_Script: {fileID: 11500000, guid: 5732963780529c746b2e67f1c1844ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 572183925818111346, guid: 5f1b5a1168e49744090ef2c47be88aa4,
+  explosionPrefab: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b,
     type: 3}
+  DefaultHealthPoint: 20
+  hiteffect: {fileID: 1497619200659460, guid: 380a1775a94df734ca504792dc0dee1e, type: 3}
+--- !u!114 &997854649125583640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946746549692192539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49e9d8c684771a46a05e55b33a4acf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {fileID: -4050791149621605484}
+  damage: 2
