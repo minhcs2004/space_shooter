@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e54aa5ebb07074db63aa8380b54870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 5
 --- !u!114 &4618315337306794546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefabs: {fileID: 8527195508639748667, guid: 5c96b92410183494ba5e614d968bd460,
     type: 3}
-  firerate: 0.05
+  firerate: 0.1
   bulletOffset: {x: 0, y: 0.3, z: 0}
 --- !u!50 &4618315337306794557
 Rigidbody2D:
@@ -354,6 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56946161758fd9f478c485e153588658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkSpeed: 0.1
 --- !u!1 &4618315339068797247
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,19 +1,31 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemyHealth : Health
 {
     public GameObject hiteffect;
+    private GameObject clone;
+    private Vector3 effectOffset;
+    
+
+    protected override void Start()
+    {
+        base.Start();
+        
+    }
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (HealthPoint > 0)
         {
-            Instantiate(hiteffect, transform.position, transform.rotation);
-            Destroy(hiteffect, 1 / 10);
+            effectOffset = collision.transform.position;
+            clone = Instantiate(hiteffect, effectOffset, Quaternion.identity);
+            Destroy(clone, 1);
             
         }
         else
-        base.OnTriggerEnter2D(collision);
+        base.die();
     }
 
     protected override void die()

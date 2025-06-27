@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public int movementSpeed = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
     {
         var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPoint.z = 0;
-        transform.position = worldPoint;
+        transform.position = Vector3.Lerp(transform.position, worldPoint, movementSpeed * Time.deltaTime);
     }
 }

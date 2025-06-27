@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public int DefaultHealthPoint;
     protected int HealthPoint;
 
-    private void Start()
+    protected virtual void Start()
     {
         HealthPoint = DefaultHealthPoint;
     }
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        die();
+       
 
     }
 
@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
         var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(explosion, 1);
         Destroy(gameObject);
+        
 
     }
 
