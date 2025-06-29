@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b,
     type: 3}
-  DefaultHealthPoint: 20
+  DefaultHealthPoint: 3
   hiteffect: {fileID: 4951330987856771510, guid: 9101d2ccfe1eaac4885930e24af0f79a,
     type: 3}
 --- !u!114 &997854649125583640
@@ -212,4 +212,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: {fileID: -4050791149621605484}
-  suicideDamage: 5
+  suicideDamage: 1
