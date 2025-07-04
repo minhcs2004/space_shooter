@@ -7,9 +7,14 @@ public class EnemyHealth : Health
     public GameObject hiteffect;
     private GameObject clone;
     private Vector3 effectOffset;
-    
+    public static int livingEnemyCount;
 
-    
+    private void Awake()
+    {
+        livingEnemyCount++;
+    }
+
+
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,8 +31,10 @@ public class EnemyHealth : Health
 
     public override void die()
     {
+        livingEnemyCount--;
+        
         base.die();
         Debug.Log("enemy died");
-        enemyCouter.Instance.enemyDefeated();
+        
     }
 }
